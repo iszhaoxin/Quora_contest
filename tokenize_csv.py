@@ -14,7 +14,8 @@ if __name__ == "__main__":
     input_csv = csv.reader(input_file, delimiter=",", doublequote=True, lineterminator="\n", quotechar='"')
     output_file = open(args.output, mode="wt")
     output_csv = csv.writer(output_file, delimiter=",", doublequote=True, lineterminator="\n", quotechar='"')
-    input_file.readline()
+    header = next(input_csv)
+    output_csv.writerow(header)
     for row in input_csv:
         row[1] = " ".join([w.text for w in nlp(row[1])])
         output_csv.writerow(row)
