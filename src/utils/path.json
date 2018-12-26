@@ -1,0 +1,12 @@
+{
+    "InRoot": "../data/input",
+    "train_path": "../data/input/tmp/train.csv",
+    "valid_path": "../data/input/tmp/valid.csv",
+    "glove_path": "../data/input/wordEmbedded/glove.vec",
+    "word2vec_path": "../data/input/wordEmbedded/word2vec.vec",
+    "fasttext_path": "../data/input/wordEmbedded/fasttext.vec",
+    "paragram_path": "../data/input/wordEmbedded/paragram.vec",
+    "train_small_path": "../data/input/train_small.csv",
+    
+    "OutRoot": "../data/output"
+}
