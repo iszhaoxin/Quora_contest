@@ -8,7 +8,7 @@ if __name__ == "__main__":
     parser.add_argument('-output', type=str, default='dev.tokenized')
     args = parser.parse_args()
 
-    nlp = spacy.load('en')
+    nlp = spacy.load('en', disable=['parser', 'tagger', 'ner'])
 
     input_file = open(args.input)
     input_csv = csv.reader(input_file, delimiter=",", doublequote=True, lineterminator="\n", quotechar='"')
